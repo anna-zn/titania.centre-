@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitaniaCenter</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" defer></script>
+</head>
+
+<body id="page">
+    <header class="header">
+        <div class="headerprofile-container">
+            <div class="logo-container">
+                <img class="logo" src="assets/logo.jpg" alt="logo">
+                <span>Образовательный центр</span>
+            </div>
+            <div class="info-container">
+                <div class="info-item"><img src="assets/adress.png" width="30"> ул. Михайлова, 22, к. 2, Москва, <img
+                        src="assets/tel.png" width="30"> +7 905 132-05-75</div>
+                <a href="#sing-page" class="open-doors">Запись на день открытых дверей</a>
+            </div>
+            <!-- <div class="theme-container">
+                <button id="light" class="light-theme">Light</button>
+                <button id="dark" class="dark-theme">Dark</button>
+            </div> -->
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light b">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Меню</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                О школе
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Преподаватели</a></li>
+                                <li><a class="dropdown-item" href="#">Фото</a></li>
+                                <li><a class="dropdown-item" href="#">Видео</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Обучение
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- <li><a class="dropdown-item" href="#" onclick="foo()">Action</a></li> -->
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#english1Modal"
+                                        href="#">Английский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#koreanh1Modal"
+                                        href="#">Корейский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#china1Modal"
+                                        href="#">Китайский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#franchh1Modal"
+                                        href="#">Французкий</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#german1Modal"
+                                        href="#">Немецкий</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#spain1Modal"
+                                        href="#">Испанский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#italian1Modal"
+                                        href="#">Итальянский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#japanese1Modal"
+                                        href="#">Японский</a></li>
+                            </ul>
+
+                            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Подготовка к школе</a></li>
+                                <li><a class="dropdown-item" href="#english">Английский</a></li>
+                                <li><a class="dropdown-item" href="#">Корейский</a></li>
+                                <li><a class="dropdown-item" href="#">Китайский</a></li>
+                                <li><a class="dropdown-item" href="#ogeege">Английский ОГЭ и ЕГЭ</a></li>
+                                <li><a class="dropdown-item" href="#">Французский</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Стоимость
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- <li><a class="dropdown-item" href="#" onclick="foo()">Action</a></li> -->
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#englishModal"
+                                        href="#">Английский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#koreanhModal"
+                                        href="#">Корейский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#chinaModal"
+                                        href="#">Китайский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#franchhModal"
+                                        href="#">Французкий</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#germanModal"
+                                        href="#">Немецкий</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#spainModal"
+                                        href="#">Испанский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#italianModal"
+                                        href="#">Итальянский</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#japaneseModal"
+                                        href="#">Японский</a></li>
+                            </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="modal fade" id="english1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;"> Профессиональные курсы английского языка для эффективного
+                            овладения всеми аспектами языка. Индивидуальные программы обучения, опытные преподаватели,
+                            современные методики и интенсивная практика устной речи. Регулярные занятия помогут быстро
+                            освоить лексику, грамматику и произношение, подготовиться к международным экзаменам и
+                            успешно использовать английский в работе и повседневной жизни.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="koreanh1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;">Профессиональные курсы корейского языка предлагают качественное
+                            изучение языка для всех уровней подготовки от начального до продвинутого. Занятия проводятся
+                            квалифицированными преподавателями. Эффективные методики помогут освоить разговорную речь,
+                            грамматику и письменность. Занятия проводятся индивидуально и в группах, в удобное для вас
+                            время.</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="china1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;"> Профессиональные курсы китайского языка для всех уровней
+                            подготовки. Программа разработана опытными педагогами с учетом современных методик обучения.
+                            Занятия проводятся квалифицированными преподавателями, владеющими эффективными методами
+                            освоения фонетики, грамматики и лексики. Курсы включают разговорную практику, позволяющую
+                            уверенно общаться на китайском языке уже после первых занятий.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="franchh1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;">Профессиональные курсы французского языка для всех уровней
+                            подготовки от начинающих до продвинутых пользователей. Программа включает интенсивные
+                            занятия с квалифицированными преподавателями, интерактивные упражнения и погружение в
+                            культурную среду Франции. Гарантированный результат благодаря современным методикам и
+                            индивидуальному подходу к каждому ученику.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="german1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;">Профессиональные курсы немецкого языка открывают новые горизонты
+                            возможностей. Программа направлена на развитие всех аспектов владения языком от начального
+                            до продвинутого уровня. Курсы включают грамматику, лексику, произношение и практику устной
+                            речи. Занятия ведут квалифицированные преподаватели с многолетним опытом работы. </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="spain1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;">Профессиональные курсы испанского языка для всех уровней
+                            подготовки от начального до продвинутого. Занятия проводятся опытными преподавателями,
+                            владеющими методиками интенсивного освоения грамматики, лексики и разговорной речи.
+                            Индивидуальные программы позволят вам свободно общаться, читать литературу и понимать
+                            испаноязычные медиа уже через несколько месяцев занятий.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="italian1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;">Профессиональные курсы итальянского языка для всех уровней
+                            подготовки. Опытные преподаватели помогут освоить грамматику, расширить лексический запас и
+                            развить навыки разговорной речи. Занятия проходят в небольших группах или индивидуально,
+                            обеспечивая комфортное обучение каждому студенту.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="japanese1Modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-weight: bolder;">Профессиональные курсы японского языка для всех уровней
+                            подготовки. Опытные преподаватели помогут освоить грамматику, лексику и произношение.
+                            Индивидуальные занятия и групповые уроки способствуют быстрому развитию коммуникативных
+                            навыков и пониманию культуры Японии. Занятия проводятся дистанционно и очно, график гибкий.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="englishModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Ангдийский для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки английского языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки английского языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="koreanhModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Корейский для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки корейского языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Корейский для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки корейского языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <!-- <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li>  -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="chinaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Китайский для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки китайского языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Китайский для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки китайского языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <!-- <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li>  -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="franchhModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Французкий для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки французкого языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Французкий для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки французкого языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <!-- <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li>  -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="germanModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Немецкий для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки немецкого языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Немецкий для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки немецкого языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <!-- <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="spainModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Испанский для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки испанского языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Испанский для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки испанского языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <!-- <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li>  -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="italianModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Итальянский для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки итальянского языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Итальянский для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки итальянского языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <!-- <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li>  -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="japaneseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Стоимость обучения</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <p style="font-size: large;"><b>Японский для детей дошколного возраста:</b> </p>
+                                <p style="color: red;">8400 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 45 минут </p>
+                                <p style="font-size: small;">Уроки японского языка для дошкольников 3-6 лет.</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Японский для школьников:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                                <p style="font-size: small;">Уроки японского языка для дошкольников 7-18 лет.</p>
+                            </li>
+                            <!-- <li>
+                                <p style="font-size: large;"><b>Курс английского языка для ЕГЭ и ОГЭ:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут</p>
+                            </li>
+                            <li>
+                                <p style="font-size: large;"><b>Английский для бизнеса:</b> </p>
+                                <p style="color: red;">9200 руб. / месяц</p>
+                                <p style="color: red;">8 уроков по 60 минут </p>
+                            </li>  -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="recordModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Запись на занятие</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formsing" class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">Имя</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                                <!-- <div class="valid-feedback">
+                                    Looks good!
+                                </div> -->
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Фамилия</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                                <!-- <div class="valid-feedback">
+                                    Looks good!
+                                </div> -->
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label">Почта</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" required>
+                                    <!-- <div class="invalid-feedback">
+                                        Пожалуйста, введите почту
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom03" class="form-label">Телефон</label>
+                                <input type="number" class="form-control" id="validationCustom03" required>
+                                <!-- <div class="invalid-feedback">
+                                    Пожалуйста, введите номер телефона
+                                </div> -->
+                            </div>
+                            <div class="col-md-3">
+                                <!-- <label for="validationCustom04" class="form-label">Город</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select> -->
+                                <!-- <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div> -->
+                                <!-- <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Пароль</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div> -->
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        Согласен на обработку персональных данных
+                                    </label>
+                                    <!-- <div class="invalid-feedback">
+                                        Вы должны согласиться с условиями перед отправкой
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info" style="color: white;">Подтвердить запись</button>
+                    </div> -->
+                            <div class="col-12">
+                                <button class="btn btn-info" type="submit" style="color: white;">Подтвердить
+                                    запись</button>
+                            </div> -->
+                        </form>
+                        <!-- <div class="sing-container" id="sing-page">
+            <h3>Запись</h3>
+            <form>
+                <div class="forminfo mb-3">
+                    <label class="form-label" for="infoname">Введите Ваше имя</label>
+                    <input class="sing-form" type="text" id="infoname" autocomplete="on" />
+                </div>
+                <div class="forminfo">
+                    <label class="form-label" for="infonum">Введите Ваш телефон</label>
+                    <input class="sing-form" type="number" id="infonum" autocomplete="on" />
+                </div>
+                <div class="forminfo">
+                    <label class="form-label" for="infoem">Введите Ваш e-mail</label>
+                    <input class="sing-form" type="email" id="infoem" autocomplete="on" />
+                </div>
+                <div>
+                    <button type="button" class="sing-button btn btn-info" id="sing-button" >Записаться</button>
+                    <span class="answer" id="answer"></span>
+                </div>
+            </form>
+        </div> -->
+
+
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info" style="color: white;">Подтвердить запись</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <!-- <div class="MODAL">
+                <div class="window">
+
+                </div>
+            </div> -->
+            <div class="mainprofile-container">
+                <div class="photo-container">
+                    <img src="assets/main.png" alt="">
+                </div>
+
+                <div class="classes-container">
+                    <p><b>Центр иностранных языков<b>, который вы искали!</p>
+                    <p>Наша уникальность в том, что у нас работают <br> Высококлассные педагоги с большим опытом
+                        работы, <br> увлеченные своим делом, мотивирующие студентов <br> к общению на иностранных
+                        языках.</p>
+                    <p>Мы используем современную, коммуникативную <br> методику, направленную на преодоление
+                        языкового <br> барьера и формирование навыков правильного и <br> свободного говорения!</p>
+                    <p><a href="#classes" style="color: rgb(8, 192, 202);">Занятия</a> проводятся в Оффлайн и Онлайн
+                        формате:</p>
+                </div>
+                <div class="news-container">
+                    <h2>Наши новости</h2>
+                    <article>
+                        <br>
+                        <p><b>12.01.2026</b></p>
+                        <p><i>У нас отличная новость - </i></p>
+                        <p><i>28 января пройдет день открытых дверей!</i></p>
+                    </article>
+                    <article>
+                        <br>
+                        <p><b>9.01.2026</b></p>
+                        <p><i>У нас отличная новость - </i></p>
+                        <p><i>открылся набор в группы по подготовке к ОГЭ и ЕГЭ по английскому языку!</i></p>
+                    </article>
+                    <article>
+                        <br>
+                        <p><b>5.01.2026</b></p>
+                        <p><i>У нас отличная новость - </i></p>
+                        <p><i>Открылся набор в группу по изучению китайского языка!</i></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="carusel">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                        aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner" id="classes">
+                    <div class="carousel-item active">
+                        <img src="assets/English-13-14.jpg" class="d-block w-100" id="english" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+
+                            <a href="#sing-page" class="btn btn-primary">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/English-17-18.jpg" class="d-block w-100" id="english" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="#sing-page" class="btn btn-primary">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/Korean-12-13.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="#sing-page" class="btn btn-primary">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/Korean-14-18.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="#sing-page" class="btn btn-primary">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/china1 (1).jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="#sing-page" class="btn btn-primary">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/china2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="#sing-page" class="btn btn-primary">Записаться</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/English-17-18.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="#sing-page" class="btn btn-primary">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div> -->
+        <section>
+            <div class="cards" id="classes">
+                <div>
+                    <div class="card" style="width: 29rem;">
+                        <img src="assets/englishcard.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">Английский
+                                язык</h5>
+                            <p class="card-text">
+                                Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому языку и культуре.</p>
+                            <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                href="#english2Modal">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 29rem;">
+                        <img src="assets/kore.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">Корейский язык
+                            </h5>
+                            <p class="card-text">Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому языку
+                                и культуре.</p>
+                            <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                href="#koreanh2Modal">Подробнее</a>
+                                <!-- <a href="#english2Modal" class="dropdown-item" class="cardtext btn btn-info">Подробнее</a> -->
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 29rem;">
+                        <img src="assets/китайскийяз.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">Китайский язык
+                            </h5>
+                            <p class="card-text">Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому языку
+                                и культуре.</p>
+                            <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                href="#china2Modal">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 29rem;">
+                        <img src="assets/franch.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">Французкий
+                                язык</h5>
+                            <p class="card-text">Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому языку
+                                и культуре.</p>
+                            <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                href="#franchh2Modal">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="card" style="width: 29rem;">
+                            <img src="assets/german.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">Немецкий
+                                    язык</h5>
+                                <p class="card-text">Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому
+                                    языку и культуре.</p>
+                                <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                    href="#german2Modal">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 29rem;">
+                            <img src="assets/spain.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">Испанский
+                                    язык</h5>
+                                <p class="card-text">Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому
+                                    языку и культуре.</p>
+                                <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                    href="#spain2Modal">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 29rem;">
+                            <img src="assets/italiacard.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">
+                                    Итальянский язык</h5>
+                                <p class="card-text">Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому
+                                    языку и культуре.</p>
+                                <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                    href="#italian2Modal">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 29rem;">
+                            <img src="assets/apanese.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: rgb(236, 155, 57); font-weight: bolder;">Японский
+                                    язык</h5>
+                                <p class="card-text">Записывайтесь прямо сейчас и сделайте первый шаг навстречу новому
+                                    языку и культуре.</p>
+                                <a class="cardtext btn btn-info" data-bs-toggle="modal" data-bs-target="#"
+                                    href="#japanese2Modal">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+        <div class="modal fade" id="english2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p> Профессиональные курсы английского языка для эффективного овладения всеми аспектами языка.
+                            Индивидуальные программы обучения, опытные преподаватели, современные методики и интенсивная
+                            практика устной речи. Регулярные занятия помогут быстро освоить лексику, грамматику и
+                            произношение, подготовиться к международным экзаменам и успешно использовать английский в
+                            работе и повседневной жизни</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="koreanh2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Профессиональные курсы корейского языка предлагают качественное изучение языка для всех
+                            уровней подготовки от начального до продвинутого. Занятия проводятся квалифицированными
+                            преподавателями. Эффективные методики помогут освоить разговорную речь, грамматику и
+                            письменность. Занятия проводятся индивидуально и в группах, в удобное для вас время.</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="china2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p> Профессиональные курсы китайского языка для всех уровней подготовки. Программа разработана
+                            опытными педагогами с учетом современных методик обучения. Занятия проводятся
+                            квалифицированными преподавателями, владеющими эффективными методами освоения фонетики,
+                            грамматики и лексики. Курсы включают разговорную практику, позволяющую уверенно общаться на
+                            китайском языке уже после первых занятий.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="franchh2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Профессиональные курсы французского языка для всех уровней подготовки от начинающих до
+                            продвинутых пользователей. Программа включает интенсивные занятия с квалифицированными
+                            преподавателями, интерактивные упражнения и погружение в культурную среду Франции.
+                            Гарантированный результат благодаря современным методикам и индивидуальному подходу к
+                            каждому ученику.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="german2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Профессиональные курсы немецкого языка открывают новые горизонты возможностей. Программа
+                            направлена на развитие всех аспектов владения языком от начального до продвинутого уровня.
+                            Курсы включают грамматику, лексику, произношение и практику устной речи. Занятия ведут
+                            квалифицированные преподаватели с многолетним опытом работы. </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="spain2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Профессиональные курсы испанского языка для всех уровней подготовки от начального до
+                            продвинутого. Занятия проводятся опытными преподавателями, владеющими методиками
+                            интенсивного освоения грамматики, лексики и разговорной речи. Индивидуальные программы
+                            позволят вам свободно общаться, читать литературу и понимать испаноязычные медиа уже через
+                            несколько месяцев занятий.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="italian2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Профессиональные курсы итальянского языка для всех уровней подготовки. Опытные преподаватели
+                            помогут освоить грамматику, расширить лексический запас и развить навыки разговорной речи.
+                            Занятия проходят в небольших группах или индивидуально, обеспечивая комфортное обучение
+                            каждому студенту.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="japanese2Modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Подробнее о наших курсах</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Профессиональные курсы японского языка для всех уровней подготовки. Опытные преподаватели
+                            помогут освоить грамматику, лексику и произношение. Индивидуальные занятия и групповые уроки
+                            способствуют быстрому развитию коммуникативных навыков и пониманию культуры Японии. Занятия
+                            проводятся дистанционно и очно, график гибкий. </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-info"><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#recordModal" href="#" style="color: white;">Записаться</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- запись -->
+
+        <!-- <div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#tgchannel" class="btn btn-primary"  id="sing-button">Записаться</a>
+  </div>
+</div> -->
+        <br>
+        <div>
+            <div id="sing-page" class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    style="font-size: large;">
+                                    <h3 style="color:red"><b style="font-size: large;">Записаться на день
+                                            открытых дверей</b></h3>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="sing-container">
+                                        <h3>Запись</h3>
+                                        <form>
+                                            <div class="forminfo mb-3">
+                                                <label class="form-label" for="infoname">Введите имя</label>
+                                                <input class="sing-form" type="text" id="infoname" autocomplete="on" />
+                                            </div>
+                                            <div class="forminfo">
+                                                <label class="form-label" for="infonum">Введите телефон</label>
+                                                <input class="sing-form .kostil" type="number" id="infonum"
+                                                    autocomplete="on" />
+                                            </div>
+                                            <div class="forminfo">
+                                                <label class="form-label" for="infoem">Введите e-mail</label>
+                                                <input class="sing-form" type="email" id="infoem" autocomplete="on" />
+                                            </div>
+                                            <div>
+                                                <button type="button" class="sing-button btn btn-info"
+                                                    id="sing-button">Записаться</button>
+                                                <span class="answer" id="answer"></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                <!-- <div class="sing-container" id="sing-page">
+            <h3>Запись</h3>
+            <form>
+                <div class="forminfo mb-3">
+                    <label class="form-label" for="infoname">Введите Ваше имя</label>
+                    <input class="sing-form" type="text" id="infoname" autocomplete="on" />
+                </div>
+                <div class="forminfo">
+                    <label class="form-label" for="infonum">Введите Ваш телефон</label>
+                    <input class="sing-form" type="number" id="infonum" autocomplete="on" />
+                </div>
+                <div class="forminfo">
+                    <label class="form-label" for="infoem">Введите Ваш e-mail</label>
+                    <input class="sing-form" type="email" id="infoem" autocomplete="on" />
+                </div>
+                <div>
+                    <button type="button" class="sing-button btn btn-info" id="sing-button" >Записаться</button>
+                    <span class="answer" id="answer"></span>
+                </div>
+            </form>
+        </div> -->
+
+    </main>
+
+    <footer>
+        <button class="tgchannel" id="tgchannel"> <a href="https://t.me/+n9chF4hq1H83NmQ6" target="_blank">Наш ТГ
+                канал</a></button>
+
+        <p>© COPYRIGHT TITANIA CENTER 2026. DESIGN & DEVELOPMENT BY ANN</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
